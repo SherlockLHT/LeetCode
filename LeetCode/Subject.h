@@ -3,6 +3,8 @@
 
 #include <vector>
 #include <map>
+#include <windows.h>
+#include <iostream>
 using namespace std;
 
 /*
@@ -13,7 +15,6 @@ using namespace std;
 因为 nums[0] + nums[1] = 2 + 7 = 9
 所以返回 [0, 1]
 */
-
 vector<int> twoSum(vector<int>& nums, int target)
 {
 	vector<int> result;
@@ -38,5 +39,26 @@ vector<int> twoSum(vector<int>& nums, int target)
 	}
 	return result;
 }
+void twoSum()
+{
+	vector<int> nums;
+	nums.push_back(3);
+	nums.push_back(2);
+	nums.push_back(4);
+
+	DWORD start_time = ::GetTickCount();
+
+	vector<int> result = twoSum(nums, 9);
+
+	DWORD end_time = ::GetTickCount();
+	cout << "Cost time:" << end_time - start_time << "ms" << endl;
+
+	for (int index = 0; index < result.size(); index++)
+	{
+		cout << result.at(index) << ",";
+	}
+}
+
+
 
 #endif	//SUBJECT_H
