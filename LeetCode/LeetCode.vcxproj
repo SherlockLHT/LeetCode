@@ -84,6 +84,7 @@
   <ItemGroup>
     <ClInclude Include="addTwoNumbers.h" />
     <ClInclude Include="LinkList.h" />
+    <ClInclude Include="LongestSubstring.h" />
     <ClInclude Include="Subject.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
