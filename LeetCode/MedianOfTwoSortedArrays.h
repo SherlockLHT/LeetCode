@@ -26,16 +26,56 @@ nums2 = [3, 4]
 using namespace std;
 
 void PrintNums(const vector<int>& nums);
+double GetMedian(const vector<int>& nums);
 
 double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) 
 {
-	double median_num = 0.00;
+	vector<int> new_nums;
+	int index1 = 0, index2 = 0;
+	//数组1和数组2在循环结束时，必是一个取完，一个未取完
+	while (index1 < nums1.size() && index2 < nums2.size())
+	{
+		if (nums1.at(index1) < nums2.at(index2))
+		{
+			new_nums.push_back(nums1.at(index1++));
+		}
+		else
+		{
+			new_nums.push_back(nums2.at(index2++));
+		}
+	}
+	if (index1 < nums1.size())//数组1没有取完，将其剩下的数据取出放入新数组
+	{
+		for (; index1 < nums1.size(); index1++)
+		{
+			new_nums.push_back(nums1.at(index1));
+		}
+	}
+	else
+	{
+		for (; index2 < nums2.size(); index2++)
+		{
+			new_nums.push_back(nums2.at(index2));
+		}
+	}
+	PrintNums(new_nums);
 
-	PrintNums(nums1);
-
-	return median_num;
+	return GetMedian(new_nums);
 }
 
+double GetMedian(const vector<int>& nums)
+{
+	int length = nums.size();
+	if (length % 2 == 0)	//偶数
+	{
+		int sum = nums.at(length / 2 - 1) + nums.at(length / 2);
+		return ((double)sum) / 2;
+	}
+	else
+	{
+		return (double)nums.at(length / 2);
+	}
+}
 
 void PrintNums(const vector<int>& nums)
 {
@@ -48,19 +88,12 @@ void PrintNums(const vector<int>& nums)
 
 void TestMedianOfTwoSortedArrays()
 {
-	vector<int> nums1;
-	vector<int> nums2;
+	vector<int> nums1 = {1,2};
+	vector<int> nums2 = {4};
 
-	nums1.push_back(1);
-	nums1.push_back(2);
-	nums1.push_back(3);
-	nums1.push_back(4);
-	nums1.push_back(5);
 
-	nums2.push_back(7);
-	nums2.push_back(8);
-
-	double result = findMedianSortedArrays(nums1, nums2);
+	//double result = findMedianSortedArrays(nums1, nums2);
+	double result = (GetMedian(nums1) + GetMedian(nums2)) / 2;
 
 	cout << "Result: " << result << endl;
 }

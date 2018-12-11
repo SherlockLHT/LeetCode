@@ -1,14 +1,12 @@
-#include "Subject.h"
-#include "addTwoNumbers.h"
-#include "LongestSubstring.h"
-#include "MedianOfTwoSortedArrays.h"
-#include "MergeSort.h"
+#include "PalindromeNumber.h"
 
+#include <iostream>
 using namespace std;
 
 int main()
 {
-	//TestMedianOfTwoSortedArrays();
-	TestMergeSort();
+	TestIsPalindrome();
 	cout << endl;
+
+	return 0;
 }
