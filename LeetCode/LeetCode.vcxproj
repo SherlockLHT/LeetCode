@@ -90,6 +90,7 @@
     <ClInclude Include="MergeSort.h" />
     <ClInclude Include="PalindromeNumber.h" />
     <ClInclude Include="Subject.h" />
+    <ClInclude Include="ValidPalindrome.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

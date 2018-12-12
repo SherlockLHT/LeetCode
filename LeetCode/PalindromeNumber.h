@@ -1,3 +1,6 @@
+#ifndef PALINDROME_NUMBER_H
+#define PALINDROME_NUMBER_H
+
 /*
 Determine whether an integer is a palindrome. An integer is a palindrome when it reads the same backward as forward.
 
@@ -52,7 +55,7 @@ bool isPalindrome(int x) {
 }
 
 void TestIsPalindrome(){
-	
+
 	int num = 101;
 
 	if (isPalindrome(num))
@@ -64,3 +67,4 @@ void TestIsPalindrome(){
 		cout << "NO" << endl;
 	}
 }
+#endif	//PALINDROME_NUMBER_H

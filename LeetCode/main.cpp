@@ -1,5 +1,4 @@
-#include "PalindromeNumber.h"
-
+#include "ValidPalindrome.h"
 #include <iostream>
 using namespace std;
 
