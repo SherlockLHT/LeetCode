@@ -18,7 +18,31 @@ Output: false
 #include <iostream>
 using namespace std;
 
-const char SPACE_CH = 32;
+bool isAlphanumeric(char ch)
+{
+	if (ch >= 48 && ch <= 57)
+	{
+		return true;
+	}
+	else if (ch >= 65 && ch <= 90)
+	{
+		return true;
+	}
+	else if (ch >= 97 && ch <= 122)
+	{
+		return true;
+	}
+	return false;
+}
+
+char toLower(char ch)
+{
+	if (ch >= 65 && ch <= 90)
+	{
+		return ch + 32;
+	}
+	return ch;
+}
 
 bool isPalindrome(string s) 
 {
@@ -28,29 +52,34 @@ bool isPalindrome(string s)
 	while (forward_index < backward_index)
 	{
 		char forward_ch = s.at(forward_index);
-		if (forward_ch == SPACE_CH)
-		{
-			continue;
-		}
-		forward_index++;
 		char backward_ch = s.at(backward_index);
-		if (backward_ch == SPACE_CH)
+
+		if (!isAlphanumeric(forward_ch))
 		{
+			forward_index++;
 			continue;
 		}
-		backward_index--;
-		if (forward_ch != backward_ch)
+		
+		if (!isAlphanumeric(backward_ch))
+		{
+			backward_index--;
+			continue;
+		}
+		
+		if (toLower(forward_ch) != toLower(backward_ch))
 		{
 			b_status = false;
 			break;
 		}
+		forward_index++;
+		backward_index--;
 	}
 	return b_status;
 }
 
 void TestIsPalindrome()
 {
-	string str = "A man, a plan, a canal: Panama";
+	string str = "0P";
 	//string str = "abc";
 	if (isPalindrome(str))
 	{
