@@ -29,16 +29,16 @@ ListNode* createListNode(int value)
 ListNode* addTwoNumbers(ListNode* l1, ListNode* l2)
 {
 	ListNode* result = new ListNode(0);
-	result->value = l1->value + l2->value;
+	result->val = l1->val + l2->val;
 	l1 = l1->next;
 	l2 = l2->next;
-	int add = result->value / 10;
-	result->value = result->value % 10;
+	int add = result->val / 10;
+	result->val = result->val % 10;
 	while (l1 != NULL || l2 != NULL)
 	{
 		int sum = add;
-		sum += (l1 == NULL) ? 0 : l1->value;
-		sum += (l2 == NULL) ? 0 : l2->value;
+		sum += (l1 == NULL) ? 0 : l1->val;
+		sum += (l2 == NULL) ? 0 : l2->val;
 		add = sum / 10;
 		result = Append(result, sum % 10);
 		l1 = (l1 == NULL) ? NULL : l1->next;

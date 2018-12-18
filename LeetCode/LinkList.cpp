@@ -6,11 +6,11 @@ void DisplayLinkList(ListNode* p_head)
 	{
 		return;
 	}
-	cout << p_head->value;
+	cout << p_head->val;
 	p_head = p_head->next;
 	while (p_head != NULL)
 	{
-		cout << "->" << p_head->value;
+		cout << "->" << p_head->val;
 		p_head = p_head->next;
 	}
 	cout << endl;
@@ -64,7 +64,7 @@ ListNode* InsertAfter(ListNode* p_head, int pre_value, int value)
 	}
 	ListNode* current_node = p_head;
 	ListNode* after_node = current_node->next;
-	while (current_node->value != pre_value && after_node != NULL)
+	while (current_node->val != pre_value && after_node != NULL)
 	{
 		current_node = current_node->next;
 		after_node = current_node->next;
@@ -77,13 +77,13 @@ ListNode* InsertAfter(ListNode* p_head, int pre_value, int value)
 ListNode* InsertAhead(ListNode* p_head, int after_value, int value)
 {
 	ListNode* new_node = new ListNode(value);
-	if (p_head == NULL || p_head->value == after_value)
+	if (p_head == NULL || p_head->val == after_value)
 	{
 		return InsertHead(p_head, value);
 	}
 	ListNode* current_node = p_head;
 	ListNode* ahead_node = p_head;
-	while (current_node != NULL && current_node->value != after_value)
+	while (current_node != NULL && current_node->val != after_value)
 	{
 		ahead_node = current_node;
 		current_node = current_node->next;
@@ -136,7 +136,7 @@ ListNode* RemoveAllValue(ListNode* p_head, int value)
 	ListNode* node = p_head;
 	while (node != NULL)
 	{
-		if (node->value == value)
+		if (node->val == value)
 		{
 			ListNode* node_next = node->next;
 			delete node;	//释放节点资源
@@ -169,7 +169,7 @@ ListNode* RemoveFirstValue(ListNode* p_head, int value)
 	ListNode* node = p_head;
 	while (node != NULL)
 	{
-		if (node->value == value)
+		if (node->val == value)
 		{
 			ListNode* node_next = node->next;
 			delete node;	//释放节点资源

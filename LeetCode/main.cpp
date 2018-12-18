@@ -1,10 +1,10 @@
-#include "ValidPalindrome2.h"
+#include "RemoveNthNodeFromEndOfList.h"
 #include <iostream>
 using namespace std;
 
 int main()
 {
-	TestIsPalindrome();
+	TestRemoveNthFromEnd();
 	cout << endl;
 
 	return 0;

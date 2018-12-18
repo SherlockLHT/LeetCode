@@ -53,5 +53,17 @@
     <ClInclude Include="ValidPalindrome2.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="MergeTwoSortedLists.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DeleteNodeInALinkedList.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MiddleOfTheLinkedList.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="RemoveNthNodeFromEndOfList.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

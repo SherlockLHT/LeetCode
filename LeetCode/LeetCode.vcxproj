@@ -83,12 +83,16 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="addTwoNumbers.h" />
+    <ClInclude Include="DeleteNodeInALinkedList.h" />
     <ClInclude Include="LinkList.h" />
     <ClInclude Include="LongestPalindromicSubstring.h" />
     <ClInclude Include="LongestSubstring.h" />
     <ClInclude Include="MedianOfTwoSortedArrays.h" />
     <ClInclude Include="MergeSort.h" />
+    <ClInclude Include="MergeTwoSortedLists.h" />
+    <ClInclude Include="MiddleOfTheLinkedList.h" />
     <ClInclude Include="PalindromeNumber.h" />
+    <ClInclude Include="RemoveNthNodeFromEndOfList.h" />
     <ClInclude Include="Subject.h" />
     <ClInclude Include="ValidPalindrome.h" />
     <ClInclude Include="ValidPalindrome2.h" />

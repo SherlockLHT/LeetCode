@@ -6,9 +6,9 @@ using namespace std;
 
 struct ListNode
 {
-	int value;
+	int val;
 	ListNode* next;
-	ListNode(int val) :value(val), next(NULL){}
+	ListNode(int x) :val(x), next(NULL){}
 };
 
 //œ‘ æ¡¥±Ì
