@@ -1,10 +1,10 @@
-#include "SwapNodesInPairs.h"
+#include "RotateList.h"
 #include <iostream>
 using namespace std;
 
 int main()
 {
-	TestSwapPairs();
+	TestRotateRight();
 	cout << endl;
 
 	return 0;

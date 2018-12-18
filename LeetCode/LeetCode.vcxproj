@@ -93,6 +93,7 @@
     <ClInclude Include="MiddleOfTheLinkedList.h" />
     <ClInclude Include="PalindromeNumber.h" />
     <ClInclude Include="RemoveNthNodeFromEndOfList.h" />
+    <ClInclude Include="RotateList.h" />
     <ClInclude Include="Subject.h" />
     <ClInclude Include="SwapNodesInPairs.h" />
     <ClInclude Include="ValidPalindrome.h" />
