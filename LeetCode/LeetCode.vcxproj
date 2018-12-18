@@ -94,6 +94,7 @@
     <ClInclude Include="PalindromeNumber.h" />
     <ClInclude Include="RemoveNthNodeFromEndOfList.h" />
     <ClInclude Include="Subject.h" />
+    <ClInclude Include="SwapNodesInPairs.h" />
     <ClInclude Include="ValidPalindrome.h" />
     <ClInclude Include="ValidPalindrome2.h" />
   </ItemGroup>

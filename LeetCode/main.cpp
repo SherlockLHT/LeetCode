@@ -1,10 +1,10 @@
-#include "RemoveNthNodeFromEndOfList.h"
+#include "SwapNodesInPairs.h"
 #include <iostream>
 using namespace std;
 
 int main()
 {
-	TestRemoveNthFromEnd();
+	TestSwapPairs();
 	cout << endl;
 
 	return 0;
